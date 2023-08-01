@@ -13,8 +13,7 @@ const filteredMenuItems = (role) => {
       title: "Personal",
       icon: <Users size={20} />,
       navLink: "/personal",
-    },
- 
+    } 
   ];
 
   // const role = localStorage?.getItem("role");

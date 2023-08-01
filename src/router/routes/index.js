@@ -18,6 +18,7 @@ import { isObjEmpty } from "@utils";
 
 import Ficha from "../../views/fichas/Ficha";
 import Personal from "../../views/personal/Personal";
+import FormFichaIndividual from "../../views/fichas/FormFichaIndividual";
 const role = localStorage?.getItem("role");
 const getLayout = {
   blank: <BlankLayout />,
@@ -76,9 +77,12 @@ const Routes = [
     element: <AuthGuard><Ficha /></AuthGuard>,
   },
   {
+    path: "/registrar-ficha-individual",
+    element: <AuthGuard><FormFichaIndividual /></AuthGuard>,
+  },
+  {
     path: "/personal",
     element: <AuthGuard><Personal /></AuthGuard>,
-
   },
 
   {
