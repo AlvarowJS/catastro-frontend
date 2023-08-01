@@ -47,8 +47,7 @@ const FormFichaIndividual = () => {
                         <span
                             className='bg-primary'
                             style={{ color: 'white', fontSize: 15, padding: 2 }}
-                        // className='bg-primary'
-                        // style={{ color: 'white', fontSize: 15, padding: 2 }}
+                       
                         >03 </span>
                         CODIGO DE REFERENCIA CATASTRAL
                     </div>
@@ -159,7 +158,7 @@ const FormFichaIndividual = () => {
                 <Col sm="3">
                     <Label>
                         <span className='bg-primary'
-                        style={{ color: 'white', fontSize: 15, padding: 2 }}>05 </span>
+                            style={{ color: 'white', fontSize: 15, padding: 2 }}>05 </span>
                         CODIGO PREDIAL RENTAS
                     </Label>
                     <input type="text" className='form-control' />
@@ -167,43 +166,46 @@ const FormFichaIndividual = () => {
                 <Col sm="4">
                     <Label>
                         <span className='bg-primary'
-                        style={{ color: 'white', fontSize: 15, padding: 2 }}>06 </span>
+                            style={{ color: 'white', fontSize: 15, padding: 2 }}>06 </span>
                         UNIDAD ACUMULADA A COD. PREDIAL RENTAS
                     </Label>
                     <input type="text" className='form-control' />
                 </Col>
             </Row>
+            <div className="d-flex justify-content-center">
+                <div>
 
-            <Fragment className="text-center">
-                <Nav pills className='mb-2'>
-                    <NavItem>
-                        <NavLink active={active === '1'} onClick={() => toggleTab('1')}>
-                            <span className='fw-bold'>I</span>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink active={active === '2'} onClick={() => toggleTab('2')}>
-                            <span className='fw-bold'>II</span>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink active={active === '3'} onClick={() => toggleTab('3')}>
-                            <span className='fw-bold'>III</span>
-                        </NavLink>
-                    </NavItem>                    
-                </Nav>
-                <TabContent activeTab={active}>
-                    <TabPane tabId='1'>
-                        <FormFichaIndividualPrimer />
-                    </TabPane>
-                    <TabPane tabId='2'>
-                        <FormFichaIndividualSecun />
-                    </TabPane>
-                    <TabPane tabId='3'>
-                        <FormFichaIndividualTerce />
-                    </TabPane>
-                </TabContent>
-            </Fragment>
+                    <Nav pills className='mb-2 mt-2'>
+                        <NavItem>
+                            <NavLink active={active === '1'} onClick={() => toggleTab('1')}>
+                                <span className='fw-bold'>I</span>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink active={active === '2'} onClick={() => toggleTab('2')}>
+                                <span className='fw-bold'>II</span>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink active={active === '3'} onClick={() => toggleTab('3')}>
+                                <span className='fw-bold'>III</span>
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </div>
+            </div>
+            <TabContent activeTab={active}>
+                <TabPane tabId='1'>
+                    <FormFichaIndividualPrimer />
+                </TabPane>
+                <TabPane tabId='2'>
+                    <FormFichaIndividualSecun />
+                </TabPane>
+                <TabPane tabId='3'>
+                    <FormFichaIndividualTerce />
+                </TabPane>
+            </TabContent>
+
         </>
     )
 }
